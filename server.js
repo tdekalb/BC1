@@ -33,7 +33,6 @@ fs.readFile('listings.json', 'utf8', function(err, data) {
 
 	if(err)
 		throw err;
-
 	listingData = data;
 
   /*
@@ -44,4 +43,5 @@ fs.readFile('listings.json', 'utf8', function(err, data) {
 
 server = http.createServer(requestHandler);
 server.listen(port, function() {
+	console.log('server listening on: http://localhost:' + port);
 });
